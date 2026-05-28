@@ -1,0 +1,1604 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>סודות אומנות השיער — עמית קצב</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+  :root{
+    --cream: #F4ECE0;
+    --cream-soft: #F9F3EA;
+    --paper: #FBF7F1;
+    --blush: #E9D5C8;
+    --walnut: #2A1F18;
+    --walnut-soft: #4B382C;
+    --mocha: #6B4F3F;
+    --rose: #B8896B;
+    --rose-deep: #9A6A4E;
+    --gold: #A88560;
+    --line: rgba(42,31,24,.14);
+  }
+  *{ box-sizing: border-box; margin: 0; padding: 0; }
+  html, body{ background: var(--cream); color: var(--walnut); }
+  body{
+    font-family: 'Heebo', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection{ background: var(--walnut); color: var(--cream); }
+
+  .serif{ font-family: 'Frank Ruhl Libre', 'Cormorant Garamond', Georgia, serif; }
+  .italic-en{ font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; }
+
+  /* ---------- Layout ---------- */
+  .wrap{ max-width: 1280px; margin: 0 auto; padding: 0 36px; }
+  @media (max-width: 720px){ .wrap{ padding: 0 22px; } }
+
+  section{ position: relative; }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position: fixed; top: 0; right: 0; left: 0; z-index: 50;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(244, 236, 224, .72);
+    border-bottom: 1px solid rgba(42,31,24,.06);
+  }
+  .topbar .inner{
+    max-width: 1280px; margin: 0 auto;
+    padding: 14px 36px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: .02em;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .brand .mark{
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--walnut); color: var(--cream);
+    display: grid; place-items: center;
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400;
+    font-size: 17px;
+  }
+  .brand-logo{
+    width: 44px; height: 44px; border-radius: 50%;
+    object-fit: contain;
+    background: transparent;
+  }
+  .nav{
+    display: flex; align-items: center; gap: 30px;
+    font-size: 14px; color: var(--walnut-soft);
+  }
+  .nav a{ color: inherit; text-decoration: none; transition: color .2s; }
+  .nav a:hover{ color: var(--walnut); }
+  .nav .dot{ width: 4px; height: 4px; border-radius: 50%; background: var(--rose); }
+  .topbar .cta-mini{
+    background: var(--walnut); color: var(--cream);
+    border: 0; padding: 10px 18px; border-radius: 999px;
+    font: inherit; font-size: 13.5px; cursor: pointer;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: background .2s;
+  }
+  .topbar .cta-mini:hover{ background: var(--rose-deep); }
+  @media (max-width: 820px){
+    .nav{ display: none; }
+    .topbar .inner{ padding: 12px 22px; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding-top: 78px;
+    padding-bottom: 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-banner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #F2E8DD;
+  }
+  .hero-banner img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 78vh;
+    object-position: center;
+  }
+  .hero-eyebrow-float{
+    position: absolute;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 12px; letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    background: rgba(251, 247, 241, .85);
+    backdrop-filter: blur(8px);
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(184,137,107,.25);
+    white-space: nowrap;
+  }
+  .hero-eyebrow-float .ln{ width: 28px; height: 1px; background: var(--rose); }
+  .hero-belt{
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0 12px;
+  }
+  .hero-sub{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.5;
+    color: var(--walnut);
+    font-weight: 400;
+  }
+  .hero-sub em{
+    color: var(--rose-deep);
+    letter-spacing: .04em;
+  }
+  .hero-belt .cta-row{ justify-content: flex-start; }
+  @media (max-width: 820px){
+    .hero-belt{ grid-template-columns: 1fr; gap: 30px; text-align: right; }
+    .hero-banner img{ max-height: 70vh; }
+    .hero-eyebrow-float{ font-size: 10.5px; padding: 8px 16px; bottom: 16px; }
+    .hero-eyebrow-float .ln{ width: 18px; }
+  }
+  .hero-grid{
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .eyebrow{
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 12.5px; letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    margin-bottom: 36px;
+  }
+  .eyebrow .ln{ width: 38px; height: 1px; background: var(--rose); }
+  .hero h1{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: clamp(46px, 7vw, 104px);
+    line-height: .98;
+    letter-spacing: -0.015em;
+    color: var(--walnut);
+    margin-bottom: 28px;
+    text-wrap: balance;
+  }
+  .hero h1 em{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--rose-deep);
+  }
+  .hero .sub{
+    max-width: 520px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--walnut-soft);
+    margin-bottom: 44px;
+  }
+  .hero .by{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 15px;
+    color: var(--mocha);
+    letter-spacing: .04em;
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hero .by::before{ content: ''; width: 28px; height: 1px; background: var(--mocha); }
+
+  .cta-row{ display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn{
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 17px 30px;
+    background: var(--walnut); color: var(--cream);
+    border: 0; border-radius: 999px;
+    font: inherit; font-size: 15px; font-weight: 500;
+    letter-spacing: .01em;
+    cursor: pointer; text-decoration: none;
+    transition: background .25s, transform .25s;
+  }
+  .btn:hover{ background: var(--rose-deep); transform: translateY(-1px); }
+  .btn.ghost{
+    background: transparent; color: var(--walnut);
+    border: 1px solid var(--walnut);
+  }
+  .btn.ghost:hover{ background: var(--walnut); color: var(--cream); }
+  .btn svg{ width: 17px; height: 17px; }
+
+  /* Hero portrait */
+  .hero-art{
+    position: relative;
+    aspect-ratio: 4/5;
+    width: 100%;
+  }
+  .hero-art image-slot{
+    width: 100%; height: 100%;
+    display: block;
+    background: var(--blush);
+  }
+  .hero-art .badge{
+    position: absolute;
+    top: 22px; right: -18px;
+    width: 138px; height: 138px;
+    background: var(--cream);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    text-align: center;
+    border: 1px solid var(--line);
+    z-index: 2;
+  }
+  .hero-art .badge .ring{ position: absolute; inset: 8px; border: 1px dashed var(--rose); border-radius: 50%; }
+  .hero-art .badge .num{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1;
+    color: var(--walnut);
+  }
+  .hero-art .badge .lbl{
+    font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--rose-deep); margin-top: 4px;
+  }
+  .hero-art .quote{
+    position: absolute;
+    bottom: -38px; left: -22px;
+    background: var(--paper);
+    padding: 22px 26px;
+    max-width: 280px;
+    border: 1px solid var(--line);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--walnut);
+    z-index: 2;
+  }
+  .hero-art .quote::before{
+    content: '“'; position: absolute; top: -22px; right: 14px;
+    font-size: 80px; color: var(--rose); font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+  }
+
+  .hero-meta{
+    margin-top: 80px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-meta .cell{
+    padding: 24px 18px;
+    border-left: 1px solid var(--line);
+    text-align: center;
+  }
+  .hero-meta .cell:first-child{ border-left: 0; }
+  .hero-meta .n{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 36px; font-weight: 500;
+    color: var(--walnut);
+    line-height: 1;
+  }
+  .hero-meta .n em{ font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--rose-deep); font-weight: 400; }
+  .hero-meta .l{
+    font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--mocha); margin-top: 10px;
+  }
+
+  @media (max-width: 900px){
+    .hero{ padding-top: 110px; padding-bottom: 70px; }
+    .hero-grid{ grid-template-columns: 1fr; gap: 80px; }
+    .hero-art{ max-width: 460px; margin: 0 auto; aspect-ratio: 4/5; }
+    .hero-meta{ grid-template-columns: repeat(2, 1fr); }
+    .hero-meta .cell:nth-child(2){ border-left: 0; }
+    .hero-meta .cell:nth-child(3),
+    .hero-meta .cell:nth-child(4){ border-top: 1px solid var(--line); }
+    .hero-meta .cell:nth-child(3){ border-left: 1px solid var(--line); }
+  }
+
+  /* ---------- Marquee ---------- */
+  .marquee{
+    background: var(--walnut);
+    color: var(--cream);
+    overflow: hidden;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255,255,255,.05);
+  }
+  .marquee .track{
+    display: flex; gap: 60px;
+    white-space: nowrap;
+    animation: scroll 38s linear infinite;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 28px;
+    letter-spacing: .02em;
+  }
+  .marquee .track span{ display: flex; align-items: center; gap: 60px; }
+  .marquee .track .dot{
+    display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--rose); flex: none;
+  }
+  .marquee em{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--blush); font-weight: 300;
+  }
+  @keyframes scroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(50%); }
+  }
+
+  /* ---------- Pain points ---------- */
+  .pain{
+    padding: 130px 0 110px;
+    background: var(--paper);
+  }
+  .pain .label{
+    text-align: center;
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--rose-deep);
+    margin-bottom: 28px;
+  }
+  .pain .heading{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(34px, 4.6vw, 64px);
+    line-height: 1.08;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 70px;
+    color: var(--walnut);
+    text-wrap: balance;
+  }
+  .pain .heading em{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--rose-deep);
+    font-weight: 300;
+  }
+  .pain-list{
+    max-width: 880px; margin: 0 auto;
+    display: flex; flex-direction: column;
+  }
+  .pain-row{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    align-items: baseline;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .pain-row:first-child{ border-top: 1px solid var(--line); }
+  .pain-row .n{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--rose);
+    font-weight: 300;
+  }
+  .pain-row .q{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.35;
+    color: var(--walnut);
+    font-weight: 400;
+  }
+
+  .pain-after{
+    margin-top: 70px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.6vw, 30px);
+    line-height: 1.5;
+    color: var(--mocha);
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  /* ---------- About ---------- */
+  .about{ padding: 140px 0; }
+  .about-grid{
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 90px;
+    align-items: start;
+  }
+  .about-art{ position: sticky; top: 110px; }
+  .about-art image-slot,
+  .about-art .video-frame{
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--blush);
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+  .about-art .video-frame video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .about-art .video-frame::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(42,31,24,.08);
+    pointer-events: none;
+  }
+  .about-art .cap{
+    margin-top: 16px;
+    font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--mocha);
+    display: flex; justify-content: space-between;
+  }
+  .about-art .cap em{ font-family: 'Cormorant Garamond', serif; font-style: italic; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--rose-deep); }
+
+  .about h2{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: clamp(38px, 5vw, 68px);
+    line-height: 1.05;
+    margin-bottom: 36px;
+    color: var(--walnut);
+  }
+  .about h2 em{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300;
+    color: var(--rose-deep);
+  }
+  .about .ey{
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--rose-deep); margin-bottom: 22px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .about .ey::before{ content:''; width: 32px; height: 1px; background: var(--rose); }
+  .about p{
+    font-size: 17.5px;
+    line-height: 1.78;
+    color: var(--walnut-soft);
+    margin-bottom: 22px;
+  }
+  .about p strong{ color: var(--walnut); font-weight: 500; }
+  .about .pull{
+    margin: 40px 0;
+    padding: 28px 32px;
+    border-right: 2px solid var(--rose);
+    background: var(--cream-soft);
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--walnut);
+  }
+  .signature{
+    margin-top: 50px;
+    display: flex; align-items: center; gap: 18px;
+  }
+  .signature .sig{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 38px;
+    color: var(--walnut);
+    line-height: 1;
+  }
+  .signature .role{
+    font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--mocha);
+    border-right: 1px solid var(--line);
+    padding-right: 18px;
+  }
+
+  @media (max-width: 900px){
+    .about{ padding: 90px 0; }
+    .about-grid{ grid-template-columns: 1fr; gap: 50px; }
+    .about-art{ position: static; max-width: 420px; }
+  }
+
+  /* ---------- Work / Portfolio ---------- */
+  .work{
+    padding: 130px 0 130px;
+    background: var(--paper);
+    position: relative;
+  }
+  .work .top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 70px;
+  }
+  .work .ey{
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--rose-deep); margin-bottom: 22px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .work .ey::before{ content: ''; width: 32px; height: 1px; background: var(--rose); }
+  .work h2{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 5vw, 72px);
+    line-height: 1.04;
+    color: var(--walnut);
+  }
+  .work h2 em{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--rose-deep);
+    font-weight: 300;
+  }
+  .work .lead{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--mocha);
+    line-height: 1.55;
+    max-width: 420px;
+  }
+  .gallery{
+    column-count: 3;
+    column-gap: 20px;
+  }
+  .gallery figure{
+    margin: 0 0 20px;
+    break-inside: avoid;
+    position: relative;
+    overflow: hidden;
+    background: var(--blush);
+  }
+  .gallery figure img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .9s ease;
+  }
+  .gallery figure:hover img{ transform: scale(1.04); }
+  .gallery figure::after{
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(42,31,24,.55));
+    opacity: 0; transition: opacity .4s;
+    pointer-events: none;
+  }
+  .gallery figure:hover::after{ opacity: 1; }
+  .gallery figure figcaption{
+    position: absolute;
+    bottom: 18px; right: 22px; left: 22px;
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .4s, transform .4s;
+    z-index: 2;
+  }
+  .gallery figure:hover figcaption{ opacity: 1; transform: none; }
+
+  .work-foot{
+    margin-top: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 30px; flex-wrap: wrap;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+  }
+  .work-foot .more{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 20px;
+    color: var(--walnut);
+    line-height: 1.4;
+  }
+  .work-foot .more em{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--rose-deep);
+  }
+  .work-foot a.ig-link{
+    display: inline-flex; align-items: center; gap: 12px;
+    text-decoration: none;
+    color: var(--walnut);
+    font-size: 14px;
+    letter-spacing: .04em;
+    padding: 14px 22px;
+    border: 1px solid var(--walnut);
+    border-radius: 999px;
+    transition: background .25s, color .25s;
+  }
+  .work-foot a.ig-link:hover{
+    background: var(--walnut); color: var(--cream);
+  }
+  .work-foot a.ig-link svg{ width: 18px; height: 18px; }
+
+  @media (max-width: 960px){
+    .work .top{ grid-template-columns: 1fr; gap: 24px; }
+    .gallery{ column-count: 2; }
+  }
+  @media (max-width: 560px){
+    .gallery{ column-count: 1; }
+  }
+
+  /* ---------- Curriculum ---------- */
+  .curr{
+    padding: 130px 0;
+    background: var(--walnut);
+    color: var(--cream);
+  }
+  .curr .header{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+  .curr .ey{
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--blush); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .curr .ey::before{ content:''; width: 32px; height: 1px; background: var(--rose); }
+  .curr h2{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 5.4vw, 76px);
+    line-height: 1.02;
+    color: var(--cream);
+  }
+  .curr h2 em{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--rose); font-weight: 300;
+  }
+  .curr .intro{
+    font-size: 17px; line-height: 1.75;
+    color: rgba(244,236,224,.78);
+    max-width: 460px;
+  }
+  .lessons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(244,236,224,.14);
+  }
+  .lesson{
+    padding: 30px 30px 30px 0;
+    border-bottom: 1px solid rgba(244,236,224,.14);
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 22px;
+    align-items: baseline;
+    transition: background .25s, padding .25s;
+  }
+  .lesson:nth-child(odd){ border-left: 1px solid rgba(244,236,224,.14); padding-left: 50px; }
+  .lesson:nth-child(even){ padding-right: 50px; padding-left: 30px; }
+  .lesson:hover{ background: rgba(184,137,107,.08); }
+  .lesson .num{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--rose);
+    font-weight: 300;
+  }
+  .lesson .title{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--cream);
+    font-weight: 400;
+  }
+  .lesson .desc{
+    grid-column: 2;
+    font-size: 14px;
+    color: rgba(244,236,224,.6);
+    margin-top: 6px;
+    line-height: 1.55;
+  }
+  @media (max-width: 820px){
+    .curr .header{ grid-template-columns: 1fr; gap: 30px; }
+    .lessons{ grid-template-columns: 1fr; }
+    .lesson:nth-child(odd), .lesson:nth-child(even){
+      border-left: 0; padding: 26px 0;
+    }
+  }
+
+  /* ---------- Includes ---------- */
+  .includes{
+    padding: 130px 0;
+    background: var(--cream);
+  }
+  .includes .top{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: end; margin-bottom: 60px;
+  }
+  .includes h2{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 5vw, 70px);
+    line-height: 1.05;
+    color: var(--walnut);
+  }
+  .includes h2 em{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--rose-deep); font-weight: 300;
+  }
+  .includes .ey{
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--rose-deep); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .includes .ey::before{ content:''; width: 32px; height: 1px; background: var(--rose); }
+  .includes .lead{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--mocha);
+    line-height: 1.55;
+    max-width: 420px;
+  }
+
+  .inc-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .inc{
+    padding: 38px 32px;
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .inc:nth-child(3n){ border-left: 0; }
+  .inc:nth-last-child(-n+3){ border-bottom: 0; }
+  .inc .ic{
+    width: 44px; height: 44px;
+    border: 1px solid var(--rose);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    margin-bottom: 22px;
+    color: var(--rose-deep);
+  }
+  .inc .ic svg{ width: 20px; height: 20px; }
+  .inc h3{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--walnut);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .inc p{
+    font-size: 15px;
+    color: var(--walnut-soft);
+    line-height: 1.6;
+  }
+  .inc .tag{
+    position: absolute; top: 20px; left: 22px;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--rose);
+  }
+
+  @media (max-width: 900px){
+    .includes .top{ grid-template-columns: 1fr; gap: 22px; }
+    .inc-grid{ grid-template-columns: 1fr; }
+    .inc{ border-left: 0 !important; border-bottom: 1px solid var(--line) !important; }
+    .inc:last-child{ border-bottom: 0 !important; }
+  }
+
+  /* ---------- For who ---------- */
+  .forwho{
+    padding: 130px 0;
+    background: var(--paper);
+  }
+  .forwho-grid{
+    display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px;
+    align-items: start;
+  }
+  .forwho h2{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 5vw, 68px);
+    line-height: 1.04;
+    color: var(--walnut);
+    position: sticky; top: 110px;
+  }
+  .forwho h2 em{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--rose-deep); font-weight: 300;
+  }
+  .forwho h2 .ey{
+    display: flex; align-items: center; gap: 14px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--rose-deep); margin-bottom: 22px;
+    font-weight: 400; font-style: normal;
+  }
+  .forwho h2 .ey::before{ content:''; width: 32px; height: 1px; background: var(--rose); }
+
+  .for-list{ list-style: none; }
+  .for-list li{
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 20px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(19px, 2vw, 24px);
+    line-height: 1.4;
+    color: var(--walnut);
+  }
+  .for-list li:first-child{ border-top: 1px solid var(--line); }
+  .for-list li .check{
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--cream); border: 1px solid var(--rose);
+    display: grid; place-items: center;
+    color: var(--rose-deep);
+  }
+  .for-list li .check svg{ width: 14px; height: 14px; }
+
+  @media (max-width: 900px){
+    .forwho-grid{ grid-template-columns: 1fr; gap: 30px; }
+    .forwho h2{ position: static; }
+  }
+
+  /* ---------- Value / Pricing ---------- */
+  .value{
+    padding: 140px 0;
+    background: var(--cream);
+    overflow: hidden;
+    position: relative;
+  }
+  .value-inner{
+    max-width: 1080px; margin: 0 auto;
+    text-align: center; padding: 0 36px;
+  }
+  .value .ey{
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--rose-deep); margin-bottom: 24px;
+  }
+  .value h2{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 5.6vw, 80px);
+    line-height: 1.04;
+    color: var(--walnut);
+    margin-bottom: 50px;
+    text-wrap: balance;
+  }
+  .value h2 em{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--rose-deep); font-weight: 300;
+  }
+  .compare{
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 0;
+    align-items: stretch;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    margin-bottom: 60px;
+    text-align: right;
+  }
+  .compare .col{
+    padding: 38px 36px;
+  }
+  .compare .col h4{
+    font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--mocha); font-weight: 400; margin-bottom: 14px;
+  }
+  .compare .col .big{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 36px;
+    line-height: 1.15;
+    color: var(--walnut);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .compare .col.b .big{ color: var(--rose-deep); }
+  .compare .col p{ font-size: 15px; color: var(--walnut-soft); line-height: 1.6; }
+  .compare .vs{
+    display: grid; place-items: center;
+    border-right: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 28px; color: var(--rose);
+    background: var(--cream-soft);
+  }
+  .value .closer{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(22px, 2.8vw, 32px);
+    line-height: 1.5;
+    color: var(--mocha);
+    max-width: 740px; margin: 0 auto 50px;
+  }
+  .lifetime{
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 14px 24px;
+    border: 1px solid var(--rose);
+    border-radius: 999px;
+    color: var(--rose-deep);
+    font-size: 13.5px; letter-spacing: .18em; text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  .lifetime .dot{ width: 6px; height: 6px; border-radius: 50%; background: var(--rose); }
+
+  .roi-banner{
+    margin: 60px auto 50px;
+    max-width: 940px;
+    position: relative;
+    padding: 56px 40px;
+    border-top: 1px solid var(--rose);
+    border-bottom: 1px solid var(--rose);
+    text-align: center;
+  }
+  .roi-banner::before,
+  .roi-banner::after{
+    content: '';
+    position: absolute;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--rose);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .roi-banner::before{ right: -4px; }
+  .roi-banner::after{ left: -4px; }
+  .roi-banner .kicker{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--rose-deep);
+    margin-bottom: 14px;
+    letter-spacing: .02em;
+  }
+  .roi-banner .line{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.8vw, 60px);
+    line-height: 1.1;
+    color: var(--walnut);
+    text-wrap: balance;
+  }
+  .roi-banner .line em{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--rose-deep);
+    font-weight: 300;
+  }
+  @media (max-width: 600px){
+    .roi-banner{ padding: 40px 22px; margin: 40px auto; }
+  }
+
+  @media (max-width: 820px){
+    .compare{ grid-template-columns: 1fr; }
+    .compare .vs{ border: 0; padding: 8px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final{
+    padding: 150px 0;
+    background: var(--walnut);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .final::before{
+    content: '';
+    position: absolute;
+    inset: -200px;
+    background: radial-gradient(circle at 70% 30%, rgba(184,137,107,.22), transparent 60%);
+    pointer-events: none;
+  }
+  .final .inner{
+    position: relative;
+    max-width: 980px; margin: 0 auto;
+    padding: 0 36px;
+    text-align: center;
+  }
+  .final .ey{
+    font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--blush); margin-bottom: 24px;
+  }
+  .final h2{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    font-size: clamp(46px, 6.2vw, 92px);
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 32px;
+    text-wrap: balance;
+  }
+  .final h2 em{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--rose); font-weight: 300;
+  }
+  .final p.lead{
+    font-size: 19px; line-height: 1.7;
+    color: rgba(244,236,224,.8);
+    max-width: 600px; margin: 0 auto 44px;
+  }
+  .final .actions{
+    display: inline-flex; align-items: center; flex-wrap: wrap; gap: 18px;
+    justify-content: center;
+  }
+  .final .btn{
+    background: var(--cream); color: var(--walnut);
+    padding: 19px 34px; font-size: 16px;
+  }
+  .final .btn:hover{ background: var(--rose); color: var(--cream); }
+  .final .btn.ghost{
+    background: transparent; color: var(--cream); border: 1px solid rgba(244,236,224,.4);
+  }
+  .final .btn.ghost:hover{ background: var(--cream); color: var(--walnut); }
+  .final .phone{
+    margin-top: 50px;
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 22px;
+    letter-spacing: .04em;
+    color: var(--blush);
+  }
+  .final .phone a{ color: var(--cream); text-decoration: none; border-bottom: 1px solid rgba(244,236,224,.3); padding-bottom: 2px; }
+  .final .phone a:hover{ border-color: var(--rose); }
+  .final .free{
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--rose);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background: #1c130d;
+    color: rgba(244,236,224,.55);
+    padding: 36px 0;
+    font-size: 13px;
+  }
+  footer .inner{
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 36px;
+    display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    flex-wrap: wrap;
+  }
+  footer .brand{ color: var(--cream); font-size: 16px; }
+  footer a{ color: inherit; text-decoration: none; }
+  footer .social{
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 16px 8px 12px;
+    border: 1px solid rgba(244,236,224,.18);
+    border-radius: 999px;
+    color: var(--cream);
+    transition: background .2s, border-color .2s;
+  }
+  footer .social:hover{
+    background: linear-gradient(135deg, #f58529, #dd2a7b 45%, #8134af 75%, #515bd4);
+    border-color: transparent;
+    color: #fff;
+  }
+  footer .social svg{ width: 18px; height: 18px; }
+  footer .social span{ font-size: 13.5px; letter-spacing: .04em; }
+
+  /* ---------- Floating actions ---------- */
+  .fab-stack{
+    position: fixed;
+    bottom: 28px; left: 28px;
+    z-index: 60;
+    display: flex; flex-direction: column-reverse; align-items: flex-start;
+    gap: 14px;
+  }
+
+  .wa-float, .ig-float{
+    position: relative;
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 999px;
+    font-size: 14px; font-weight: 500;
+    transition: transform .25s, box-shadow .25s;
+  }
+
+  /* WhatsApp circle */
+  .wa-float{
+    width: 56px; height: 56px;
+    padding: 0;
+    justify-content: center;
+    background: #25D366;
+    box-shadow: 0 18px 40px -10px rgba(37,211,102,.55), 0 4px 14px rgba(0,0,0,.15);
+  }
+  .wa-float:hover{ transform: translateY(-2px); box-shadow: 0 24px 50px -10px rgba(37,211,102,.65), 0 6px 18px rgba(0,0,0,.18); }
+  .wa-float .wa-icon{ width: 28px; height: 28px; display: grid; place-items: center; }
+  .wa-float .wa-icon svg{ width: 26px; height: 26px; fill: white; }
+  .wa-float .label-wrap{ display: none; }
+  .wa-float .pulse{
+    position: absolute; inset: 0; border-radius: 999px;
+    box-shadow: 0 0 0 0 rgba(37,211,102,.55);
+    animation: pulse 2.2s infinite;
+    pointer-events: none;
+  }
+  @keyframes pulse{
+    0%{ box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
+    70%{ box-shadow: 0 0 0 22px rgba(37,211,102,0); }
+    100%{ box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+
+  /* Instagram circle */
+  .ig-float{
+    width: 56px; height: 56px;
+    padding: 0;
+    justify-content: center;
+    background: linear-gradient(135deg, #f58529 0%, #dd2a7b 45%, #8134af 75%, #515bd4 100%);
+    box-shadow: 0 18px 40px -10px rgba(221,42,123,.5), 0 4px 14px rgba(0,0,0,.15);
+  }
+  .ig-float:hover{ transform: translateY(-2px); box-shadow: 0 24px 50px -10px rgba(221,42,123,.6), 0 6px 18px rgba(0,0,0,.18); }
+  .ig-float svg{ width: 26px; height: 26px; stroke: #fff; }
+
+  @media (max-width: 600px){
+    .wa-float{ width: 52px; height: 52px; }
+    .fab-stack{ bottom: 20px; left: 20px; gap: 12px; }
+    .ig-float{ width: 52px; height: 52px; }
+  }
+
+  /* ---------- Decorative flourish (small SVG) ---------- */
+  .flourish{
+    display: block;
+    margin: 0 auto;
+    width: 64px; height: 18px;
+    color: var(--rose);
+  }
+  .flourish svg{ width: 100%; height: 100%; }
+
+  /* small reveal */
+  .reveal{ opacity: 0; transform: translateY(18px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in{ opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="inner">
+    <a href="#" class="brand" style="text-decoration:none; color:inherit;">
+      <img src="assets/logo-ahs.png" alt="AHS — Amit Hair Secrets" class="brand-logo" />
+      <div>עמית קצב <span style="color:var(--rose-deep); font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400;">· bridal</span></div>
+    </a>
+    <nav class="nav">
+      <a href="#about">הסיפור</a>
+      <span class="dot"></span>
+      <a href="#work">תיק העבודות</a>
+      <span class="dot"></span>
+      <a href="#curriculum">תוכן הקורס</a>
+      <span class="dot"></span>
+      <a href="#includes">מה כלול</a>
+    </nav>
+    <a class="cta-mini" href="https://wa.me/972538289779?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%9E%D7%99%D7%AA%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%D7%91%D7%A7%D7%95%D7%A8%D7%A1%20%D7%94%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99%20%D7%A1%D7%95%D7%93%D7%95%D7%AA%20%D7%90%D7%95%D7%9E%D7%A0%D7%95%D7%AA%20%D7%94%D7%A9%D7%99%D7%A2%D7%A8" target="_blank" rel="noopener">
+      שיחת ייעוץ
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-banner">
+    <img src="assets/hero.jpg" alt="סודות אומנות השיער — קורס מקצועי לתסרוקות של המאסטרית עמית קצב" />
+    <div class="hero-eyebrow-float">קורס דיגיטלי · עמית קצב</div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-belt">
+      <p class="hero-sub">
+        כל הידע שצברתי בעשור האחרון בעולם הכלות והערב,<br/>מרוכז בקורס אחד — מקצועי, מדויק ופרקטי לשטח.<br/>
+        <em class="italic-en">No filters. No shortcuts.</em>
+      </p>
+    </div>
+
+    <div class="hero-meta">
+      <div class="cell"><div class="n">10<em>+</em></div><div class="l">שנות ניסיון</div></div>
+      <div class="cell"><div class="n">1000+</div><div class="l">כלות מרוצות</div></div>
+      <div class="cell"><div class="n">23</div><div class="l">שיעורים בקורס</div></div>
+      <div class="cell"><div class="n italic-en"><em>∞</em></div><div class="l">גישה לכל החיים</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>תסרוקות כלות <span class="dot"></span> תסרוקות ערב <span class="dot"></span> המוברש המושלם <span class="dot"></span> תוספות שיער <span class="dot"></span> צמות ואסופות <span class="dot"></span> טכניקות מתקדמות <span class="dot"></span></span>
+    <span>תסרוקות כלות <span class="dot"></span> תסרוקות ערב <span class="dot"></span> המוברש המושלם <span class="dot"></span> תוספות שיער <span class="dot"></span> צמות ואסופות <span class="dot"></span> טכניקות מתקדמות <span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- PAIN POINTS -->
+<section class="pain">
+  <div class="wrap">
+    <div class="label">— בשבילך —</div>
+    <h2 class="heading">מעצבת שיער לתסרוקות ערב,<br/>אבל לא <em>מצליחה לפרוץ</em> לתחום הכלות?</h2>
+
+    <div class="pain-list">
+      <div class="pain-row"><div class="n">i.</div><div class="q">מרגישה שחסר לך ביטחון בעבודה שלך?</div></div>
+      <div class="pain-row"><div class="n">ii.</div><div class="q">התסרוקות שלך לוקחות יותר מדי זמן?</div></div>
+      <div class="pain-row"><div class="n">iii.</div><div class="q">הן פשוט לא מחזיקות לאורך האירוע?</div></div>
+      <div class="pain-row"><div class="n">iv.</div><div class="q">מאפרת שרוצה להוסיף שירות שיער מקצועי?</div></div>
+      <div class="pain-row"><div class="n">v.</div><div class="q">מתחילה — ולא יודעת מאיפה בכלל לפתוח?</div></div>
+    </div>
+
+    <div class="pain-after">
+      “בקורס הדיגיטלי הזה אני מלמדת אותך את כל הסודות והטכניקות החדשניות לתסרוקות נקיות, מדויקות ומהירות יותר.”
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-art">
+        <div class="video-frame">
+          <video src="assets/about-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="cap">
+          <span>עמית קצב · רמת גן</span>
+          <em>est. 2018</em>
+        </div>
+      </div>
+      <div>
+        <div class="ey">הסיפור שלי</div>
+        <h2>התחלתי בגיל 17.<br/>היום אני <em>מאסטרית</em>.</h2>
+
+        <p>אני עמית, מעצבת שיער לכלות וערב, בת 27 מרמת גן. הדרך שלי התחילה בגיל 17. התקשיתי מאוד בלימודים ועזבתי את התיכון בכיתה י״א. אחרי שנים של תסכול וחוסר הצלחה הרגשתי שאני לא מספיק טובה — אבל היה דבר אחד שתמיד ידעתי לעשות. שיער.</p>
+
+        <p>עשיתי צמות לחברות, למורות, לכל מי שביקשה. לאט לאט הגיעו עוד ועוד בנות, ומצאתי את עצמי עושה תסרוקות באירועים ובחגים. אמא שלי, שתמיד האמינה בי, עודדה אותי לפתוח אינסטגרם ולגבות על זה כסף. <strong>אזרתי אומץ, פתחתי אינסטגרם ולהעלות עבודות ומשם הכול התחיל לקרות.</strong></p>
+
+        <div class="pull">
+          “כמה חודשים אחרי, פתחתי דוכן צמות בקניון איילון בחנוכה. לא חשבתי שיגיעו אנשים — בסוף היו תורים מטורפים. אנשים רבו בתור מי לפני מי.”
+        </div>
+
+        <p>הקמתי דוכנים בקניונים ברחבי הארץ, התחלתי לשלב תסרוקות ערב, עבדתי בהפקות גדולות בארץ ובעולם — והבנתי שהחלום שלי הוא תחום הכלות. <strong>שזאת השליחות שלי.</strong></p>
+
+        <p>לפני שבע שנים נכנסתי לתחום הכלות, ומאז עברו תחת הידיים שלי מאות כלות מרוצות. עם הזמן התחילו להגיע בקשות ללמד — פתחתי סדנאות אישיות והעברתי מאות מפגשים למעצבות שיער שרצו להתקדם.</p>
+
+        <p>ואז הבנתי משהו חשוב: <strong>לקח לי שנים ללמוד ולהגיע לרמה שאני בה היום, דרך של טעויות, נסיונות, לחץ, חוסר וודאות ולמידה מטורפת. אם אפשר לחסוך למישהי את שנות הניסוי והטעייה</strong> — אני רוצה להיות זאת שתעביר לה את זה. ככה נולד הקורס.</p>
+
+        <div class="signature">
+          <div class="sig">עמית קצב.</div>
+          <div class="role">AMIT HAIR STYLE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / PORTFOLIO -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="ey">תיק העבודות</div>
+        <h2>תסרוקות מהשטח</h2>
+      </div>
+      <div class="lead">
+        מאות כלות מרוצות — תסרוקות מהשטח, מתוך אומנות של שנים של עבודה בשטח. זה מה שתלמדי ליצור.
+      </div>
+    </div>
+
+    <div class="gallery">
+      <figure>
+        <img src="assets/work/01.jpg" alt="תסרוקת קוקו אסוף גבוה עם גלי מלאים" loading="lazy" />
+        <figcaption>קוקו גבוה · גלים מלאים</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work/06.jpg" alt="צמות דקיקות עם שזיף פרחים" loading="lazy" />
+        <figcaption>צמות בוהו · פרחים</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work/03.jpg" alt="אסוף נמוך עם גלים קדמיים רכים" loading="lazy" />
+        <figcaption>אסוף נמוך · על העורף</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work/02.jpg" alt="גלי הוליוווד מתחת רישה אמצעית" loading="lazy" />
+        <figcaption>גלי הוליוווד</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work/07.jpg" alt="גלים ארוכים בגון שוקולד" loading="lazy" />
+        <figcaption>גלים ארוכים · קלאסי</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work/05.jpg" alt="תסרוקות תאומות לתאומות עם אסופים גבוהים" loading="lazy" />
+        <figcaption>תאומות · אסוף גבוה</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work/09.jpg" alt="צמות עם פרחים לבנים ושיער זהוב גלי" loading="lazy" />
+        <figcaption>צמות פרחוניות · רומנטי</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work/10.jpg" alt="גלי שוקולד עשירים על שיער ארוך" loading="lazy" />
+        <figcaption>גלי שוקולד · קלאסי</figcaption>
+      </figure>
+    </div>
+
+    <div class="work-foot">
+      <div class="more">עוד <em>מאות</em> עבודות מחכות לך — באינסטגרם.</div>
+      <a class="ig-link" href="https://www.instagram.com/amit_hair_style/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @amit_hair_style
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curr" id="curriculum">
+  <div class="wrap">
+    <div class="header">
+      <div>
+        <div class="ey">תוכן הקורס</div>
+        <h2>מה תלמדי<br/><em>בקורס.</em></h2>
+      </div>
+      <div class="intro">עשור של ניסיון בשטח, מזוקק ל-23 שיעורים ממוקדים. כלים שתשתמשי בהם מהשבוע הראשון — לא תיאוריה, פרקטיקה אמיתית עם כלות.</div>
+    </div>
+
+    <div class="lessons">
+      <div class="lesson"><div class="num">01</div><div><div class="title">טכניקות מתקדמות לתסרוקות ערב וכלה</div><div class="desc">היסודות שכל תסרוקת חייבת — ומה שמבדיל בין טוב לבין יוצא דופן.</div></div></div>
+      <div class="lesson"><div class="num">02</div><div><div class="title">התאמת תסרוקת לסוגי שיער שונים</div><div class="desc">קריאת השיער — מה מתאים לעדין, חלק, מתולתל או דק.</div></div></div>
+      <div class="lesson"><div class="num">03</div><div><div class="title">עבודה נכונה עם מוצרי שיער</div><div class="desc">מתי, איך וכמה — לכל מוצר יש זמן ותפקיד.</div></div></div>
+      <div class="lesson"><div class="num">04</div><div><div class="title">פן נכון ומדויק</div><div class="desc">היסוד של כל תסרוקת מקצועית — בלי קיצורי דרך.</div></div></div>
+      <div class="lesson"><div class="num">05</div><div><div class="title">עבודה עם בייביליס וסוגי חימום</div><div class="desc">כל גודל, כל טמפרטורה, כל סוג של גל — מתי איזה.</div></div></div>
+      <div class="lesson"><div class="num">06</div><div><div class="title">המוברש המושלם</div><div class="desc">הטכניקה שמייצרת תסרוקת עמידה שמחזיקה לאורך כל האירוע.</div></div></div>
+      <div class="lesson"><div class="num">07</div><div><div class="title">תסרוקות פזורות</div><div class="desc">הסטייל שכלות הכי אוהבות — נקי, רך, ועדיין מחזיק.</div></div></div>
+      <div class="lesson"><div class="num">08</div><div><div class="title">תסרוקות אסופות</div><div class="desc">אסוף, חצי אסוף, גבוה ונמוך — מבנים שעובדים על כל ראש.</div></div></div>
+      <div class="lesson"><div class="num">09</div><div><div class="title">סוגי תסרוקות עם צמות</div><div class="desc">מהבסיס ועד הצמות המורכבות שכל כלה רוצה.</div></div></div>
+      <div class="lesson"><div class="num">10</div><div><div class="title">מתיחות מדויקות</div><div class="desc">הטכניקה שמשנה תסרוקת רגילה לתסרוקת מקצועית.</div></div></div>
+      <div class="lesson"><div class="num">11</div><div><div class="title">עבודה עם תוספות שיער</div><div class="desc">חיבור נכון, טבעי ובלתי מורגש — שלא יזוז כל הלילה.</div></div></div>
+      <div class="lesson"><div class="num">12</div><div><div class="title">כלים שישדרגו אותך מקצועית</div><div class="desc">הכל ממוקד, פרקטי ורלוונטי לשטח. בלי בזבוז זמן.</div></div></div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center; color: rgba(244,236,224,.5); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px;">ועוד 11 שיעורים מעמיקים נוספים — סך הכל 23 שיעורים בקורס.</div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="includes" id="includes">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="ey">מה כלול</div>
+        <h2>הקורס,<br/>ועוד <em>הרבה מעבר.</em></h2>
+      </div>
+      <div class="lead">
+        כשאת מצטרפת לקורס, את לא מקבלת רק שיעורים. את נכנסת לקהילה ולמערכת תמיכה שתלווה אותך בכל שלב.
+      </div>
+    </div>
+
+    <div class="inc-grid">
+      <div class="inc">
+        <div class="tag">01</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="6 3 18 3 21 8 12 21 3 8 6 3"/><line x1="12" y1="8" x2="12" y2="21"/><line x1="3" y1="8" x2="21" y2="8"/></svg>
+        </div>
+        <h3>23 שיעורים ממוקדים</h3>
+        <p>שיטה ברורה ומסודרת — צעד אחר צעד, בלי תיאוריה מיותרת.</p>
+      </div>
+      <div class="inc">
+        <div class="tag">02</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="6"/><polyline points="9 13 9 22 12 19 15 22 15 13"/></svg>
+        </div>
+        <h3>תעודה מקצועית</h3>
+        <p>בסיום הקורס מקבלת תעודה רשמית שתלווה אותך בקריירה.</p>
+      </div>
+      <div class="inc">
+        <div class="tag">03</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9c-1.5 0-3-.4-4.2-1L3 21l1-4.8C3.4 15 3 13.5 3 12z"/></svg>
+        </div>
+        <h3>קבוצת ווטסאפ סגורה</h3>
+        <p>קהילה של תלמידות הקורס — שאלות, השראה ותמיכה ברגעי אמת.</p>
+      </div>
+      <div class="inc">
+        <div class="tag">04</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3 7 7 1-5 5 1.5 8L12 19l-6.5 4L7 15 2 10l7-1z"/></svg>
+        </div>
+        <h3>טיפים ותכני בונוס</h3>
+        <p>תוכן נוסף שמתעדכן — סודות מהשטח שלא נכנסו לקורס המקורי.</p>
+      </div>
+      <div class="inc">
+        <div class="tag">05</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18"/></svg>
+        </div>
+        <h3>תמיכה מקצועית</h3>
+        <p>ליווי וסיוע אישי כשמשהו לא מסתדר — אני כאן בשבילך.</p>
+      </div>
+      <div class="inc">
+        <div class="tag">06</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M8 3v3M16 3v3"/></svg>
+        </div>
+        <h3>גישה לספקים מובחרים</h3>
+        <p>קישורים למוצרי שיער איכותיים — במחירים משתלמים, רק לתלמידות.</p>
+      </div>
+      <div class="inc">
+        <div class="tag">07</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.78.66 2.6a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.48-1.23a2 2 0 012.11-.45c.82.32 1.7.54 2.6.66A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3>המספר האישי שלי</h3>
+        <p>לייעוץ ולשאלות — קו ישיר אליי, בלי מתווכים, ברגעי האמת.</p>
+      </div>
+      <div class="inc">
+        <div class="tag">08</div>
+        <div class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6l9 6 9-6"/><rect x="3" y="6" width="18" height="13" rx="2"/></svg>
+        </div>
+        <h3>גישה לכל החיים</h3>
+        <p>הקורס נשאר אצלך. תוכלי לחזור אליו בכל פעם שתצטרכי.</p>
+      </div>
+      <div class="inc" style="background: var(--walnut); color: var(--cream); display: flex; flex-direction: column; justify-content: center;">
+        <div class="tag" style="color: var(--rose);">★</div>
+        <h3 style="color: var(--cream); font-size: 24px;">בלי פילטרים.<br/>בלי סודות.</h3>
+        <p style="color: rgba(244,236,224,.7); margin-top: 10px;">כל מה שלקח לי עשור ללמוד — מועבר לך בלי שום הסתרה.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="forwho" id="forwho">
+  <div class="wrap">
+    <div class="forwho-grid">
+      <h2>
+        <span class="ey">למי הקורס מתאים</span>
+        הקורס הזה<br/><em>בשבילך,</em><br/>אם...
+      </h2>
+
+      <ul class="for-list">
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>את מעצבת שיער מתחילה ורוצה כיוון</span>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>את כבר עובדת עם כלות, אבל רוצה למלא את היומן</span>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>כל תסרוקת לוקחת לך שעות — וזה צריך להשתנות</span>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>את מרגישה שזה עדיין לא מספיק מדויק</span>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>התסרוקות שלך לא מחזיקות לאורך האירוע</span>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>את מאפרת שרוצה להוסיף שירות שיער מקצועי</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE -->
+<section class="value">
+  <div class="value-inner">
+    <div class="ey">השקעה אמיתית</div>
+    <h2>קורס ברמה כזו<br/>יכול לעלות <em>עשרות אלפי שקלים</em></h2>
+
+    <div class="compare">
+      <div class="col">
+        <h4>בבית ספר לשיער</h4>
+        <div class="big">עשרות אלפי שקלים</div>
+        <p>תוכן רחב מדי, תיאוריה מיושנת, חודשים ארוכים — והרבה ממה שתלמדי לא ישמש אותך בעבודה אמיתית עם כלות.</p>
+      </div>
+      <div class="vs">vs.</div>
+      <div class="col b">
+        <h4>בקורס הדיגיטלי</h4>
+        <div class="big">ידע ממוקד · פרקטי · רלוונטי</div>
+        <p>23 שיעורים שכולם מהשטח. בלי טכניקות מיושנות. בלי בזבוז זמן. רק עבודה אמיתית עם כלות, מהיום הראשון.</p>
+      </div>
+    </div>
+
+    <div class="roi-banner">
+      <div class="kicker">— החשבון פשוט —</div>
+      <div class="line">לקוחה <em>אחת</em><br/>ואת מחזירה את ההשקעה.</div>
+    </div>
+
+    <div class="closer">
+      “בסיום הקורס תוכלי לעבוד עם כלות בביטחון מלא, בזמני עבודה מהירים, עם תוצאות ברמה גבוהה — והכי חשוב, עם לקוחות מרוצות.”
+    </div>
+
+    <div class="lifetime">
+      <span class="dot"></span>
+      גישה לקורס נשארת אצלך לכל החיים
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="inner">
+    <div class="ey">— מוכנה להתחיל? —</div>
+    <h2>בואי <em>נדבר.</em></h2>
+    <p class="lead">
+      רוצה לבדוק אם הקורס מתאים גם לך? לחצי כאן לקבלת פרטים ולקביעת שיחת ייעוץ אישית ללא עלות.
+    </p>
+    <div class="actions">
+      <a class="btn" href="https://wa.me/972538289779?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%9E%D7%99%D7%AA%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%D7%91%D7%A7%D7%95%D7%A8%D7%A1%20%D7%94%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99%20%D7%A1%D7%95%D7%93%D7%95%D7%AA%20%D7%90%D7%95%D7%9E%D7%A0%D7%95%D7%AA%20%D7%94%D7%A9%D7%99%D7%A2%D7%A8" target="_blank" rel="noopener">
+        שיחה בוואטסאפ
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4l-2.4-1.1c-.3-.1-.6 0-.8.2l-.9 1c-1.5-.7-2.8-2-3.5-3.5l1-.9c.2-.2.3-.5.2-.8L9.6 6.5C9.5 6.1 9.1 5.9 8.7 6L7 6.5c-.5.2-.8.6-.8 1.1.1 6.1 5 11 11.1 11.1.5 0 1-.3 1.1-.8l.5-1.7c.2-.4 0-.8-.4-1z"/></svg>
+      </a>
+      <a class="btn ghost" href="tel:0538289779">
+        053-8289779
+      </a>
+    </div>
+    <div class="phone">
+      <span class="free">שיחת ייעוץ ללא עלות</span> · <a href="tel:0538289779">053-8289779</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div class="brand">עמית קצב · סודות אומנות השיער</div>
+    <a class="social" href="https://www.instagram.com/amit_hair_style/" target="_blank" rel="noopener" aria-label="עמית קצב באינסטגרם">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      <span>@amit_hair_style</span>
+    </a>
+    <div>© 2026 כל הזכויות שמורות · <a href="https://wa.me/972538289779" target="_blank" rel="noopener">053-8289779</a></div>
+  </div>
+</footer>
+
+<!-- Floating actions -->
+<div class="fab-stack">
+  <a class="wa-float" href="https://wa.me/972538289779?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%9E%D7%99%D7%AA%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%D7%91%D7%A7%D7%95%D7%A8%D7%A1%20%D7%94%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99%20%D7%A1%D7%95%D7%93%D7%95%D7%AA%20%D7%90%D7%95%D7%9E%D7%A0%D7%95%D7%AA%20%D7%94%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%9C%D7%9A" target="_blank" rel="noopener" aria-label="שלחי הודעה בוואטסאפ">
+    <span class="pulse"></span>
+    <span class="wa-icon">
+      <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6 1.5h.3C24.6 28.5 30 23.1 30 16.5c0-3.2-1.2-6.2-3.5-8.5C24.2 5.7 21.2 4.5 18 4.5c-.6 0-1.3.1-2 .2.1-.4 0-.9 0-1.7zM12.2 9.4c.2 0 .4 0 .6.1.2 0 .4.1.6.5.3.5.9 1.9.9 2 .1.1.1.3 0 .5 0 .1-.1.3-.3.4-.1.2-.3.3-.4.5-.1.1-.3.3-.1.5.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.6.3.2.5.1.7-.1.2-.2.7-.8 1-1.1.2-.3.5-.2.8-.1.3.1 1.9.9 2.2 1.1.3.1.5.2.6.3.1.2.1.9-.2 1.8-.3.9-1.5 1.7-2.3 1.8-.6.1-1.3.2-3.5-.7-3-1.1-4.9-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.2-.3.5-.4.7-.4z"/></svg>
+    </span>
+    <span class="label-wrap">
+      <span>דברי איתי</span>
+      <small>שיחת ייעוץ ללא עלות</small>
+    </span>
+  </a>
+
+  <a class="ig-float" href="https://www.instagram.com/amit_hair_style/" target="_blank" rel="noopener" aria-label="עמית קצב באינסטגרם">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="#fff" stroke="none"/></svg>
+  </a>
+</div>
+
+<script>
+  // smooth scroll for nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const t = document.getElementById(id);
+      if(t){
+        e.preventDefault();
+        window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
